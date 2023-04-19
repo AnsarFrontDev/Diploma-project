@@ -1,9 +1,20 @@
 .pager {
   display: flex;
 
-  button,
-  a {
-    text-align: center;
+  button {
+    color: #000;
+    padding: 8px 16px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+    border: 1px solid #ddd;
+    background-color: #ffbd03;
+
+    &:active {
+      border: 1px solid #000;
+    }
+  }
+
+  .notActive {
     color: #000;
     padding: 8px 16px;
     text-decoration: none;
@@ -12,17 +23,23 @@
 
     &:hover {
       cursor: pointer;
-    }
-    
-    &:active {
-      background-color: #000;
-      color: white;
-      border: 1px solid #000;
-    }
-    
-    &:visited {
-      background-color: #000;
+      background-color: #ddd;
     }
 
+    &:active {
+      border: 1px solid #000;
+    }
+  }
+  
+  .active {
+    background-color: #000;
+    color: white;
+    padding: 8px 16px;
+    text-decoration: none;
+    border: 1px solid #000;
+
+    &:hover {
+      cursor: pointer;
+    }
   }
 }
